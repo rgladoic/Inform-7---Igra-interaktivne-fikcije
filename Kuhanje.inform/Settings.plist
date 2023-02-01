@@ -28,7 +28,7 @@
 		<key>IFSettingZCodeVersion</key>
 		<integer>256</integer>
 		<key>IFSettingCompilerVersion</key>
-		<string></string>
+		<string>****</string>
 	</dict>
 	<key>IFRandomSettings</key>
 	<dict/>

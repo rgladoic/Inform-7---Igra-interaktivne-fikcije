@@ -1,5 +1,61 @@
 "Kuhanje" by Robert
 
+When play begins:
+	play the sound of cooking;
+	say "Hello, this is a game where the player has to find the missing ingredients.";
+
+
+The display banner rule is listed before the when play begins stage rule in the startup rules.
+	
+Figure of map is the file "map.png".
+Sound of cooking is the file "happy-cooking.ogg".
+Figure of spicek is the file "spicek.png".
+
+Mapping is an action applying to nothing.
+Understand "map" as mapping.
+Understand "look at map" as mapping.
+
+After mapping:
+	display the Figure of map;
+	continue the action;
+	
+Taxi_to_Ducan is an action applying to nothing.
+Understand "take taxi to Ducan" as Taxi_to_Ducan.
+Understand "taxi to Ducan" as Taxi_to_Ducan.
+
+Before Taxi_to_Ducan when the price of the money is less than $2.65:
+	say "You don't have any money." instead.
+	
+After Taxi_to_Ducan:
+	decrease the price of the money by the $2.65;
+	say "You paid $2.65 for taxi, leaving you with [the price of the money].";
+	now the player is in the Ducan;
+	continue the action;
+	
+Taxi_to_Kuhinja is an action applying to nothing.
+Understand "take taxi to Kuhinja" as Taxi_to_Kuhinja.
+Understand "taxi to Kuhinja" as Taxi_to_Kuhinja.
+
+Before Taxi_to_Kuhinja when the price of the money is less than $2.65:
+	say "You don't have any money." instead.
+	
+
+After Taxi_to_Kuhinja:
+	decrease the price of the money by the $2.65;
+	say "You paid $2.65 for taxi, leaving you with [the price of the money].";
+	now the player is in the Kuhinja;
+	continue the action;
+
+Price is a kind of value.
+$9.99 specifies a price.
+A thing has a price.	
+
+The player carries a wallet. 
+The wallet contains money. 
+The price of the money is $10.77. 
+The printed name of the money is "[price of the money] in cash". 
+Understand "cash" as the money.
+
 Kuhinja is a room. "You are in the kitchen. Food needs to be prepared, but some ingredients are missing. The recipe with the necessary ingredients is on the table. Chef Spicek will tell you where to find the ingredients that need to be brought to the table."
 The table is here. "A wooden table with a recipe on it."
 The table is scenery.
@@ -13,7 +69,9 @@ Spicek is a man. "Sipcek is a cook who prepares food. He's standing in front of 
 The description of Spicek is "Spicek is a man of medium height. He has short brown hair and brown eyes. He is dressed as a chef."
 Spicek is here.
 Understand "Ingredients" or "ingredients "as "[ingredients]".
-Instead of asking Spicek about "[ingredients]", say "Spicek say :'The flour is in the room to the west of the Kuhinja, the carrots and parsley are in the Vrt, and you have to go to the Ducan to get meat and milk. First, you need to take the box that contains the key that opens the door to the Spajza.'"
+Instead of asking Spicek about "[ingredients]", say "Spicek say :'The flour is in the room to the west of the Kuhinja, the carrots and parsley are in the Vrt, and you have to go to the Ducan to get meat and milk. First, you need to take the box that contains the key that opens the door to the Spajza. At any time you can look at the map and take a taxi to the Ducan or Kuhinja.'"
+Before asking Spicek about "[ingredients]":
+	display Figure of spicek.
 Kljuc is a thing.
 Kljuc can be discovered or undiscovered.
 Kljuc is undiscovered.
@@ -111,9 +169,41 @@ The fridge is scenery.
 Before taking the fridge:
 	instead say "You can't take the fridge with you, it's too heavy."
 The eggs are in the fridge.
+The price of eggs is $2.05.
+Before buying eggs when the price of the money is less than the price of the eggs:
+	say "You don't have any money." instead.
+Instead of buying eggs:
+	decrease the price of the money by the price of eggs;
+	say "You paid [the price of the eggs] for eggs, leaving you with [the price of the money].";
+	now the price of the eggs is $0.00;
+	now the player is carrying the eggs.
 The meat is in the fridge.
+The price of meat is $4.49.
+Before buying meat when the price of the money is less than the price of the meat:
+	say "You don't have any money." instead.
+Instead of buying meat:
+	decrease the price of the money by the price of meat;
+	say "You paid [the price of the meat] for meat, leaving you with [the price of the money].";
+	now the price of the meat is $0.00;
+	now the player is carrying the meat.
 The milk is in the fridge.
+The price of milk is $0.98.
+Before buying milk when the price of the money is less than the price of the milk:
+	say "You don't have any money." instead.
+Instead of buying milk:
+	decrease the price of the money by the price of milk;
+	say "You paid [the price of the milk] for milk, leaving you with [the price of the money].";
+	now the price of the milk is $0.00;
+	now the player is carrying the milk.
 The cheese is in the fridge.
+The price of cheese is $8.76.
+Before buying cheese when the price of the money is less than the price of the cheese:
+	say "You don't have any money." instead.
+Instead of buying cheese:
+	decrease the price of the money by the price of cheese;
+	say "You paid [the price of the cheese] for cheese, leaving you with [the price of the money].";
+	now the price of the cheese is $0.00;
+	now the player is carrying the cheese.
 
 After putting on the table:
 	If parsley is on the table and carrot is on the table and flour is on the table and meat is on the table and milk is on the table:

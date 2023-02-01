@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Skein rootNode="node-1">
   <generator>Windows Inform 7 6M62</generator>
-  <activeNode nodeId="node-81"/>
+  <activeNode nodeId="node-1"/>
   <item nodeId="node-1">
     <command xml:space="preserve">Kuhanje</command>
-    <result xml:space="preserve">Kuhanje&#x000A;An Interactive Fiction by Robert&#x000A;Release 1 / Serial number 230106 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Kuhinja&#x000A;You are in the kitchen. Food needs to be prepared, but some ingredients are missing. The recipe with the necessary ingredients is on the table. Chef Spicek will tell you where to find the ingredients that need to be brought to the table.&#x000A;&#x000A;Sipcek is a cook who prepares food. He's standing in front of you right now.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Kuhanje&#x000A;An Interactive Fiction by Robert&#x000A;Release 1 / Serial number 230201 / Inform 7 build 6M62 (I6/v6.33 lib 6/12N) SD&#x000A;&#x000A;Hello, this is a game where the player has to find the missing ingredients.&#x000A;&#x000A;Kuhinja&#x000A;You are in the kitchen. Food needs to be prepared, but some ingredients are missing. The recipe with the necessary ingredients is on the table. Chef Spicek will tell you where to find the ingredients that need to be brought to the table.&#x000A;&#x000A;Sipcek is a cook who prepares food. He's standing in front of you right now.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
       <child nodeId="node-2"/>
       <child nodeId="node-23"/>
       <child nodeId="node-34"/>
-      <child nodeId="node-35"/>
-      <child nodeId="node-37"/>
+      <child nodeId="node-59"/>
+      <child nodeId="node-61"/>
     </children>
   </item>
   <item nodeId="node-2">
@@ -297,25 +297,299 @@
   </item>
   <item nodeId="node-34">
     <command xml:space="preserve">ask spicek about ingredients</command>
-    <result xml:space="preserve">Spicek say :"The flour is in the room to the west of the Kuhinja, the carrots and parsley are in the Vrt, and you have to go to the Ducan to get meat and milk. First, you need to take the box that contains the key that opens the door to the Spajza."&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Spicek say :"The flour is in the room to the west of the Kuhinja, the carrots and parsley are in the Vrt, and you have to go to the Ducan to get meat and milk. First, you need to take the box that contains the key that opens the door to the Spajza. At any time you can look at the map and take a taxi to the Ducan or Kuhinja."&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>YES</changed>
     <children>
-      <child nodeId="node-58"/>
+      <child nodeId="node-35"/>
     </children>
   </item>
-  <item nodeId="node-58">
+  <item nodeId="node-35">
     <command xml:space="preserve">look at box</command>
     <result xml:space="preserve">You see a box with key in it.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-59"/>
+      <child nodeId="node-36"/>
+      <child nodeId="node-81"/>
     </children>
   </item>
-  <item nodeId="node-59">
+  <item nodeId="node-36">
     <command xml:space="preserve">take Kljuc</command>
     <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-37"/>
+    </children>
+  </item>
+  <item nodeId="node-37">
+    <command xml:space="preserve">take key</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-38"/>
+    </children>
+  </item>
+  <item nodeId="node-38">
+    <command xml:space="preserve">take box</command>
+    <result xml:space="preserve">You picked up the box and now you have the key that opens the door to Spajza.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-39"/>
+    </children>
+  </item>
+  <item nodeId="node-39">
+    <command xml:space="preserve">unlock Vrata_spajza</command>
+    <result xml:space="preserve">(with Kljuc)&#x000A;You unlock Vrata_spajza.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-40"/>
+    </children>
+  </item>
+  <item nodeId="node-40">
+    <command xml:space="preserve">go west</command>
+    <result xml:space="preserve">(first opening Vrata_spajza)&#x000A;&#x000A;Spajza&#x000A;You are in the pantry. There are shelves in the pantry where certain ingredients are located. If you continue east, you will return to the Kuhinja.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-41"/>
+    </children>
+  </item>
+  <item nodeId="node-41">
+    <command xml:space="preserve">take flour</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-42"/>
+    </children>
+  </item>
+  <item nodeId="node-42">
+    <command xml:space="preserve">go east</command>
+    <result xml:space="preserve">Kuhinja&#x000A;You are in the kitchen. Food needs to be prepared, but some ingredients are missing. The recipe with the necessary ingredients is on the table. Chef Spicek will tell you where to find the ingredients that need to be brought to the table.&#x000A;&#x000A;Sipcek is a cook who prepares food. He's standing in front of you right now.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-43"/>
+    </children>
+  </item>
+  <item nodeId="node-43">
+    <command xml:space="preserve">go east</command>
+    <result xml:space="preserve">(first opening Vrata_vrt)&#x000A;&#x000A;Vrt&#x000A;You are in the garden. In front of you is a basket of vegetables. If you continue west, you will return to the Kuhinja.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-44"/>
+    </children>
+  </item>
+  <item nodeId="node-44">
+    <command xml:space="preserve">look at basket</command>
+    <result xml:space="preserve">Basket with vegetables.&#x000A;&#x000A;In the basket are a carrot, a parsley and a tomato.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-45"/>
+    </children>
+  </item>
+  <item nodeId="node-45">
+    <command xml:space="preserve">take carrot</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-46"/>
+    </children>
+  </item>
+  <item nodeId="node-46">
+    <command xml:space="preserve">take parsley</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-47"/>
+    </children>
+  </item>
+  <item nodeId="node-47">
+    <command xml:space="preserve">go west</command>
+    <result xml:space="preserve">Kuhinja&#x000A;You are in the kitchen. Food needs to be prepared, but some ingredients are missing. The recipe with the necessary ingredients is on the table. Chef Spicek will tell you where to find the ingredients that need to be brought to the table.&#x000A;&#x000A;Sipcek is a cook who prepares food. He's standing in front of you right now.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-48"/>
+    </children>
+  </item>
+  <item nodeId="node-48">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">(first opening Vrata_ulica)&#x000A;&#x000A;Ulica&#x000A;You are in the street. If you go north, you will reach the shop, and if you go south, you will return to the Kuhinja.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-49"/>
+    </children>
+  </item>
+  <item nodeId="node-49">
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">(first opening Vrata_ducan)&#x000A;&#x000A;Ducan&#x000A;You are in a shop. Groceries are in the fridge. If you continue south, you will come to a Ulica.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-50"/>
+    </children>
+  </item>
+  <item nodeId="node-50">
+    <command xml:space="preserve">take meat</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-51"/>
+    </children>
+  </item>
+  <item nodeId="node-51">
+    <command xml:space="preserve">take milk</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-52"/>
+    </children>
+  </item>
+  <item nodeId="node-52">
+    <command xml:space="preserve">go south</command>
+    <result xml:space="preserve">Ulica&#x000A;You are in the street. If you go north, you will reach the shop, and if you go south, you will return to the Kuhinja.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-53"/>
+    </children>
+  </item>
+  <item nodeId="node-53">
+    <command xml:space="preserve">go south</command>
+    <result xml:space="preserve">Kuhinja&#x000A;You are in the kitchen. Food needs to be prepared, but some ingredients are missing. The recipe with the necessary ingredients is on the table. Chef Spicek will tell you where to find the ingredients that need to be brought to the table.&#x000A;&#x000A;Sipcek is a cook who prepares food. He's standing in front of you right now.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-54"/>
+    </children>
+  </item>
+  <item nodeId="node-54">
+    <command xml:space="preserve">put flour on table</command>
+    <result xml:space="preserve">More ingredients are missing&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-55"/>
+    </children>
+  </item>
+  <item nodeId="node-55">
+    <command xml:space="preserve">put carrot on table</command>
+    <result xml:space="preserve">More ingredients are missing&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-56"/>
+    </children>
+  </item>
+  <item nodeId="node-56">
+    <command xml:space="preserve">put parsley on table</command>
+    <result xml:space="preserve">More ingredients are missing&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-57"/>
+    </children>
+  </item>
+  <item nodeId="node-57">
+    <command xml:space="preserve">put meat on table</command>
+    <result xml:space="preserve">More ingredients are missing&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-58"/>
+    </children>
+  </item>
+  <item nodeId="node-58">
+    <command xml:space="preserve">put milk on table</command>
+    <result xml:space="preserve">*** Spicek say :"You won. You brought me all the ingredients." ***&#x000A;&#x000A;&#x000A;&#x000A;Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-81">
+    <command xml:space="preserve">take box</command>
+    <result xml:space="preserve">You picked up the box and now you have the key that opens the door to Spajza.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-82"/>
+    </children>
+  </item>
+  <item nodeId="node-82">
+    <command xml:space="preserve">unlock Vrata_spajza</command>
+    <result xml:space="preserve">What do you want to unlock Vrata_spajza with?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-83"/>
+    </children>
+  </item>
+  <item nodeId="node-83">
+    <command xml:space="preserve">unlock Vrata spajza</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-84"/>
+    </children>
+  </item>
+  <item nodeId="node-84">
+    <command xml:space="preserve">unlock Vrata_spajza</command>
+    <result xml:space="preserve">What do you want to unlock Vrata_spajza with?&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-85"/>
+    </children>
+  </item>
+  <item nodeId="node-85">
+    <command xml:space="preserve">unlock Vrata_spajza with key</command>
+    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-86"/>
+    </children>
+  </item>
+  <item nodeId="node-86">
+    <command xml:space="preserve">unlock Vrata_spajza with Kljuc</command>
+    <result xml:space="preserve">You unlock Vrata_spajza.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-87"/>
+    </children>
+  </item>
+  <item nodeId="node-87">
+    <command xml:space="preserve">go west</command>
+    <result xml:space="preserve">(first opening Vrata_spajza)&#x000A;&#x000A;Spajza&#x000A;You are in the pantry. There are shelves in the pantry where certain ingredients are located. If you continue east, you will return to the Kuhinja.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-88"/>
+    </children>
+  </item>
+  <item nodeId="node-88">
+    <command xml:space="preserve">take flour</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+  </item>
+  <item nodeId="node-59">
+    <command xml:space="preserve">look at recipe</command>
+    <result xml:space="preserve">Ingredients: flour, carrot, parsley, meat and milk.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -323,13 +597,10 @@
     </children>
   </item>
   <item nodeId="node-60">
-    <command xml:space="preserve">take key</command>
-    <result xml:space="preserve">You can't see any such thing.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">ask spicek about ingredients</command>
+    <result xml:space="preserve">Spicek say :"The flour is in the room to the west of the Kuhinja, the carrots and parsley are in the Vrt, and you have to go to the Ducan to get meat and milk.First, you need to take the box that contains the key that opens the door to the pantry."&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
-    <children>
-      <child nodeId="node-61"/>
-    </children>
   </item>
   <item nodeId="node-61">
     <command xml:space="preserve">take box</command>
@@ -338,6 +609,7 @@
     <changed>NO</changed>
     <children>
       <child nodeId="node-62"/>
+      <child nodeId="node-89"/>
     </children>
   </item>
   <item nodeId="node-62">
@@ -377,8 +649,8 @@
     </children>
   </item>
   <item nodeId="node-66">
-    <command xml:space="preserve">go east</command>
-    <result xml:space="preserve">(first opening Vrata_vrt)&#x000A;&#x000A;Vrt&#x000A;You are in the garden. In front of you is a basket of vegetables. If you continue west, you will return to the Kuhinja.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">put flour on table</command>
+    <result xml:space="preserve">More ingredients are missing&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -386,8 +658,8 @@
     </children>
   </item>
   <item nodeId="node-67">
-    <command xml:space="preserve">look at basket</command>
-    <result xml:space="preserve">Basket with vegetables.&#x000A;&#x000A;In the basket are a carrot, a parsley and a tomato.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">go east</command>
+    <result xml:space="preserve">(first opening Vrata_vrt)&#x000A;&#x000A;Vrt&#x000A;You are in the garden. In front of you is a basket of vegetables. If you continue west, you will return to the Kuhinja.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -414,7 +686,7 @@
   </item>
   <item nodeId="node-70">
     <command xml:space="preserve">go west</command>
-    <result xml:space="preserve">Kuhinja&#x000A;You are in the kitchen. Food needs to be prepared, but some ingredients are missing. The recipe with the necessary ingredients is on the table. Chef Spicek will tell you where to find the ingredients that need to be brought to the table.&#x000A;&#x000A;Sipcek is a cook who prepares food. He's standing in front of you right now.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Kuhinja&#x000A;You are in the kitchen. Food needs to be prepared, but some ingredients are missing. The recipe with the necessary ingredients is on the table. Chef Spicek will tell you where to find the ingredients that need to be brought to the table.&#x000A;&#x000A;On the table is a flour.&#x000A;&#x000A;Sipcek is a cook who prepares food. He's standing in front of you right now.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -422,8 +694,8 @@
     </children>
   </item>
   <item nodeId="node-71">
-    <command xml:space="preserve">go north</command>
-    <result xml:space="preserve">(first opening Vrata_ulica)&#x000A;&#x000A;Ulica&#x000A;You are in the street. If you go north, you will reach the shop, and if you go south, you will return to the Kuhinja.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">put carrot on table</command>
+    <result xml:space="preserve">More ingredients are missing&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -431,8 +703,8 @@
     </children>
   </item>
   <item nodeId="node-72">
-    <command xml:space="preserve">go north</command>
-    <result xml:space="preserve">(first opening Vrata_ducan)&#x000A;&#x000A;Ducan&#x000A;You are in a shop. Groceries are in the fridge. If you continue south, you will come to a Ulica.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">put parsley on table</command>
+    <result xml:space="preserve">More ingredients are missing&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -440,8 +712,8 @@
     </children>
   </item>
   <item nodeId="node-73">
-    <command xml:space="preserve">take meat</command>
-    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">(first opening Vrata_ulica)&#x000A;&#x000A;Ulica&#x000A;You are in the street. If you go north, you will reach the shop, and if you go south, you will return to the Kuhinja.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -449,8 +721,8 @@
     </children>
   </item>
   <item nodeId="node-74">
-    <command xml:space="preserve">take milk</command>
-    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">go north</command>
+    <result xml:space="preserve">(first opening Vrata_ducan)&#x000A;&#x000A;Ducan&#x000A;You are in a shop. Groceries are in the fridge. If you continue south, you will come to a Ulica.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -458,8 +730,8 @@
     </children>
   </item>
   <item nodeId="node-75">
-    <command xml:space="preserve">go south</command>
-    <result xml:space="preserve">Ulica&#x000A;You are in the street. If you go north, you will reach the shop, and if you go south, you will return to the Kuhinja.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">take meat</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -467,8 +739,8 @@
     </children>
   </item>
   <item nodeId="node-76">
-    <command xml:space="preserve">go south</command>
-    <result xml:space="preserve">Kuhinja&#x000A;You are in the kitchen. Food needs to be prepared, but some ingredients are missing. The recipe with the necessary ingredients is on the table. Chef Spicek will tell you where to find the ingredients that need to be brought to the table.&#x000A;&#x000A;Sipcek is a cook who prepares food. He's standing in front of you right now.&#x000A;&#x000A;&gt;</result>
+    <command xml:space="preserve">take milk</command>
+    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -476,8 +748,8 @@
     </children>
   </item>
   <item nodeId="node-77">
-    <command xml:space="preserve">put flour on table</command>
-    <result xml:space="preserve">More ingredients are missing&#x000A;&gt;</result>
+    <command xml:space="preserve">go south</command>
+    <result xml:space="preserve">Ulica&#x000A;You are in the street. If you go north, you will reach the shop, and if you go south, you will return to the Kuhinja.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -485,8 +757,8 @@
     </children>
   </item>
   <item nodeId="node-78">
-    <command xml:space="preserve">put carrot on table</command>
-    <result xml:space="preserve">More ingredients are missing&#x000A;&gt;</result>
+    <command xml:space="preserve">go south</command>
+    <result xml:space="preserve">Kuhinja&#x000A;You are in the kitchen. Food needs to be prepared, but some ingredients are missing. The recipe with the necessary ingredients is on the table. Chef Spicek will tell you where to find the ingredients that need to be brought to the table.&#x000A;&#x000A;On the table are a parsley, a carrot and a flour.&#x000A;&#x000A;Sipcek is a cook who prepares food. He's standing in front of you right now.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
@@ -494,7 +766,7 @@
     </children>
   </item>
   <item nodeId="node-79">
-    <command xml:space="preserve">put parsley on table</command>
+    <command xml:space="preserve">put milk on table</command>
     <result xml:space="preserve">More ingredients are missing&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
@@ -504,207 +776,174 @@
   </item>
   <item nodeId="node-80">
     <command xml:space="preserve">put meat on table</command>
-    <result xml:space="preserve">More ingredients are missing&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-81"/>
-    </children>
-  </item>
-  <item nodeId="node-81">
-    <command xml:space="preserve">put milk on table</command>
     <result xml:space="preserve">*** Spicek say :"You won. You brought me all the ingredients." ***&#x000A;&#x000A;&#x000A;&#x000A;Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
   </item>
-  <item nodeId="node-35">
-    <command xml:space="preserve">look at recipe</command>
-    <result xml:space="preserve">Ingredients: flour, carrot, parsley, meat and milk.&#x000A;&#x000A;&gt;</result>
+  <item nodeId="node-89">
+    <command xml:space="preserve">unlock Vrata_spajza with Kljuc</command>
+    <result xml:space="preserve">You unlock Vrata_spajza.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-36"/>
+      <child nodeId="node-90"/>
     </children>
   </item>
-  <item nodeId="node-36">
-    <command xml:space="preserve">ask spicek about ingredients</command>
-    <result xml:space="preserve">Spicek say :"The flour is in the room to the west of the Kuhinja, the carrots and parsley are in the Vrt, and you have to go to the Ducan to get meat and milk.First, you need to take the box that contains the key that opens the door to the pantry."&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-  </item>
-  <item nodeId="node-37">
-    <command xml:space="preserve">take box</command>
-    <result xml:space="preserve">You picked up the box and now you have the key that opens the door to Spajza.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-38"/>
-    </children>
-  </item>
-  <item nodeId="node-38">
-    <command xml:space="preserve">unlock Vrata_spajza</command>
-    <result xml:space="preserve">(with Kljuc)&#x000A;You unlock Vrata_spajza.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-39"/>
-    </children>
-  </item>
-  <item nodeId="node-39">
+  <item nodeId="node-90">
     <command xml:space="preserve">go west</command>
     <result xml:space="preserve">(first opening Vrata_spajza)&#x000A;&#x000A;Spajza&#x000A;You are in the pantry. There are shelves in the pantry where certain ingredients are located. If you continue east, you will return to the Kuhinja.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-40"/>
+      <child nodeId="node-91"/>
     </children>
   </item>
-  <item nodeId="node-40">
+  <item nodeId="node-91">
     <command xml:space="preserve">take flour</command>
     <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-41"/>
+      <child nodeId="node-92"/>
     </children>
   </item>
-  <item nodeId="node-41">
+  <item nodeId="node-92">
     <command xml:space="preserve">go east</command>
     <result xml:space="preserve">Kuhinja&#x000A;You are in the kitchen. Food needs to be prepared, but some ingredients are missing. The recipe with the necessary ingredients is on the table. Chef Spicek will tell you where to find the ingredients that need to be brought to the table.&#x000A;&#x000A;Sipcek is a cook who prepares food. He's standing in front of you right now.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-42"/>
+      <child nodeId="node-93"/>
     </children>
   </item>
-  <item nodeId="node-42">
-    <command xml:space="preserve">put flour on table</command>
-    <result xml:space="preserve">More ingredients are missing&#x000A;&gt;</result>
+  <item nodeId="node-93">
+    <command xml:space="preserve">map</command>
+    <result xml:space="preserve">&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-43"/>
+      <child nodeId="node-94"/>
     </children>
   </item>
-  <item nodeId="node-43">
+  <item nodeId="node-94">
     <command xml:space="preserve">go east</command>
     <result xml:space="preserve">(first opening Vrata_vrt)&#x000A;&#x000A;Vrt&#x000A;You are in the garden. In front of you is a basket of vegetables. If you continue west, you will return to the Kuhinja.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-44"/>
+      <child nodeId="node-95"/>
     </children>
   </item>
-  <item nodeId="node-44">
+  <item nodeId="node-95">
+    <command xml:space="preserve">look at basket</command>
+    <result xml:space="preserve">Basket with vegetables.&#x000A;&#x000A;In the basket are a carrot, a parsley and a tomato.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-96"/>
+    </children>
+  </item>
+  <item nodeId="node-96">
     <command xml:space="preserve">take carrot</command>
     <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-45"/>
+      <child nodeId="node-97"/>
     </children>
   </item>
-  <item nodeId="node-45">
+  <item nodeId="node-97">
     <command xml:space="preserve">take parsley</command>
     <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-46"/>
+      <child nodeId="node-98"/>
     </children>
   </item>
-  <item nodeId="node-46">
+  <item nodeId="node-98">
     <command xml:space="preserve">go west</command>
-    <result xml:space="preserve">Kuhinja&#x000A;You are in the kitchen. Food needs to be prepared, but some ingredients are missing. The recipe with the necessary ingredients is on the table. Chef Spicek will tell you where to find the ingredients that need to be brought to the table.&#x000A;&#x000A;On the table is a flour.&#x000A;&#x000A;Sipcek is a cook who prepares food. He's standing in front of you right now.&#x000A;&#x000A;&gt;</result>
+    <result xml:space="preserve">Kuhinja&#x000A;You are in the kitchen. Food needs to be prepared, but some ingredients are missing. The recipe with the necessary ingredients is on the table. Chef Spicek will tell you where to find the ingredients that need to be brought to the table.&#x000A;&#x000A;Sipcek is a cook who prepares food. He's standing in front of you right now.&#x000A;&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-47"/>
+      <child nodeId="node-99"/>
     </children>
   </item>
-  <item nodeId="node-47">
+  <item nodeId="node-99">
+    <command xml:space="preserve">take taxi to Ducan</command>
+    <result xml:space="preserve">You paid $2.65 for taxi, leaving you with $8.12.&#x000A;&#x000A;Ducan&#x000A;You are in a shop. Groceries are in the fridge. If you continue south, you will come to a Ulica.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-100"/>
+    </children>
+  </item>
+  <item nodeId="node-100">
+    <command xml:space="preserve">buy meat</command>
+    <result xml:space="preserve">You paid $4.49 for meat, leaving you with $3.63.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-101"/>
+    </children>
+  </item>
+  <item nodeId="node-101">
+    <command xml:space="preserve">buy milk</command>
+    <result xml:space="preserve">You paid $0.98 for milk, leaving you with $2.65.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-102"/>
+    </children>
+  </item>
+  <item nodeId="node-102">
+    <command xml:space="preserve">take taxi to Kuhinja</command>
+    <result xml:space="preserve">You paid $2.65 for taxi, leaving you with $0.00.&#x000A;&#x000A;Kuhinja&#x000A;You are in the kitchen. Food needs to be prepared, but some ingredients are missing. The recipe with the necessary ingredients is on the table. Chef Spicek will tell you where to find the ingredients that need to be brought to the table.&#x000A;&#x000A;Sipcek is a cook who prepares food. He's standing in front of you right now.&#x000A;&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-103"/>
+    </children>
+  </item>
+  <item nodeId="node-103">
+    <command xml:space="preserve">put flour on table</command>
+    <result xml:space="preserve">More ingredients are missing&#x000A;&gt;</result>
+    <commentary xml:space="preserve"></commentary>
+    <changed>NO</changed>
+    <children>
+      <child nodeId="node-104"/>
+    </children>
+  </item>
+  <item nodeId="node-104">
     <command xml:space="preserve">put carrot on table</command>
     <result xml:space="preserve">More ingredients are missing&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-48"/>
+      <child nodeId="node-105"/>
     </children>
   </item>
-  <item nodeId="node-48">
+  <item nodeId="node-105">
     <command xml:space="preserve">put parsley on table</command>
     <result xml:space="preserve">More ingredients are missing&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-49"/>
+      <child nodeId="node-106"/>
     </children>
   </item>
-  <item nodeId="node-49">
-    <command xml:space="preserve">go north</command>
-    <result xml:space="preserve">(first opening Vrata_ulica)&#x000A;&#x000A;Ulica&#x000A;You are in the street. If you go north, you will reach the shop, and if you go south, you will return to the Kuhinja.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-50"/>
-    </children>
-  </item>
-  <item nodeId="node-50">
-    <command xml:space="preserve">go north</command>
-    <result xml:space="preserve">(first opening Vrata_ducan)&#x000A;&#x000A;Ducan&#x000A;You are in a shop. Groceries are in the fridge. If you continue south, you will come to a Ulica.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-51"/>
-    </children>
-  </item>
-  <item nodeId="node-51">
-    <command xml:space="preserve">take meat</command>
-    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-52"/>
-    </children>
-  </item>
-  <item nodeId="node-52">
-    <command xml:space="preserve">take milk</command>
-    <result xml:space="preserve">Taken.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-53"/>
-    </children>
-  </item>
-  <item nodeId="node-53">
-    <command xml:space="preserve">go south</command>
-    <result xml:space="preserve">Ulica&#x000A;You are in the street. If you go north, you will reach the shop, and if you go south, you will return to the Kuhinja.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-54"/>
-    </children>
-  </item>
-  <item nodeId="node-54">
-    <command xml:space="preserve">go south</command>
-    <result xml:space="preserve">Kuhinja&#x000A;You are in the kitchen. Food needs to be prepared, but some ingredients are missing. The recipe with the necessary ingredients is on the table. Chef Spicek will tell you where to find the ingredients that need to be brought to the table.&#x000A;&#x000A;On the table are a parsley, a carrot and a flour.&#x000A;&#x000A;Sipcek is a cook who prepares food. He's standing in front of you right now.&#x000A;&#x000A;&gt;</result>
-    <commentary xml:space="preserve"></commentary>
-    <changed>NO</changed>
-    <children>
-      <child nodeId="node-55"/>
-    </children>
-  </item>
-  <item nodeId="node-55">
-    <command xml:space="preserve">put milk on table</command>
+  <item nodeId="node-106">
+    <command xml:space="preserve">put meat on table</command>
     <result xml:space="preserve">More ingredients are missing&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>
     <children>
-      <child nodeId="node-56"/>
+      <child nodeId="node-107"/>
     </children>
   </item>
-  <item nodeId="node-56">
-    <command xml:space="preserve">put meat on table</command>
+  <item nodeId="node-107">
+    <command xml:space="preserve">put milk on table</command>
     <result xml:space="preserve">*** Spicek say :"You won. You brought me all the ingredients." ***&#x000A;&#x000A;&#x000A;&#x000A;Would you like to RESTART, RESTORE a saved game, QUIT or UNDO the last command?&#x000A;&gt;</result>
     <commentary xml:space="preserve"></commentary>
     <changed>NO</changed>

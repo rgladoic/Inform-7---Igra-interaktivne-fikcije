@@ -4,6 +4,15 @@
     <dict>
         <key>Graphics</key>
         <dict>
+            <key>3</key>
+            <string>Figures\map.png</string>
+            <key>5</key>
+            <string>Figures\spicek.png</string>
+        </dict>
+        <key>Sounds</key>
+        <dict>
+            <key>4</key>
+            <string>Sounds\happy-cooking.ogg</string>
         </dict>
     </dict>
 </plist>

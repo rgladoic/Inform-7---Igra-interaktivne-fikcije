@@ -15,6 +15,9 @@ storyfile "C:\Users\rglad\OneDrive\Radna povrina\Deklarativno programiranje\Pr
 ifiction "C:\Users\rglad\OneDrive\Radna povrina\Deklarativno programiranje\Projekt\Kuhanje.inform\Metadata.iFiction" include
 cover "C:\Program Files\Inform 7\Internal\Miscellany\Cover.jpg"
 picture 1 "C:\Program Files\Inform 7\Internal\Miscellany\Cover.jpg"
+picture 3 "C:\Users\rglad\OneDrive\Radna povrina\Deklarativno programiranje\Projekt\Kuhanje.materials\Figures\map.png"
+picture 5 "C:\Users\rglad\OneDrive\Radna povrina\Deklarativno programiranje\Projekt\Kuhanje.materials\Figures\spicek.png"
+sound 4 "C:\Users\rglad\OneDrive\Radna povrina\Deklarativno programiranje\Projekt\Kuhanje.materials\Sounds\happy-cooking.ogg"
 
 ! Placeholder variables
 
